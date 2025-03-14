@@ -17,20 +17,25 @@ Este endpoint permite autenticar al usuario y obtener un **JSON Web Token (JWT)*
 #### Request Body (JSON):
 
 *json*
+```
 {
   "username": "usuario",
   "password": "contraseña"
 }
+```
 
 *Response*
+```
 {
   "access_token": "your_jwt_token_here"
 }
+```
 
 con este token podrás acceder al siguiente endpoint:
 **[https://test-frontend-dev.onrender.com/api/modulos](https://test-frontend-dev.onrender.com/api/modulos)**
 donde obtendras una respuesta como esta: 
 
+```
 [
   {
     "titulo": "Módulo 1: Introducción al Desarrollo Web",
@@ -53,6 +58,8 @@ donde obtendras una respuesta como esta:
     ]
   }
 ]
+```
+
 Puedes utilizar Js Vanilla, React o Next para consumir dicha API; en cuanto a tecnolgías derivadas de CSS tienes libre eleccion. 
 Usa como referencia el siguiente ejemplo; finalmente tienes libertad de diseño.
 ![Referencia de diseño](ref/diseño.png)
@@ -61,4 +68,6 @@ Puntos a valorar:
   - Conocimientos en UI/UX
   - Calidad de código
   - Rendimiento de componentes
+
+  
 *Esta prueba busca evaluar el expertise del postulante; no necesitas presentarlo en tiempo record. Rindelo con traquilidad y disfruta del Test*
