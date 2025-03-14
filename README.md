@@ -8,6 +8,8 @@ La API está desplegada y disponible en la siguiente URL:
 
 ## Endpoints
 
+La primera parte de la prueba consiste en crear un Login basico que permita obtener un JWT:
+
 ### 1. **Login para obtener JWT**
 **Método**: `POST`  
 **URL**: `/login`
@@ -33,6 +35,13 @@ Este endpoint permite autenticar al usuario y obtener un **JSON Web Token (JWT)*
 
 con este token podrás acceder al siguiente endpoint:
 **[https://test-frontend-dev.onrender.com/api/modulos](https://test-frontend-dev.onrender.com/api/modulos)**
+
+no olvides hacer uso de tu token: 
+```
+  headers: {
+    'Authorization': 'Bearer your_jwt_token_here'
+  }
+```
 donde obtendras una respuesta como esta: 
 
 ```
@@ -59,6 +68,8 @@ donde obtendras una respuesta como esta:
   }
 ]
 ```
+
+La segunda parte del Test consiste en mostrar los datos de un curso.
 
 Puedes utilizar Js Vanilla, React o Next para consumir dicha API; en cuanto a tecnolgías derivadas de CSS tienes libre eleccion. 
 Usa como referencia el siguiente ejemplo; finalmente tienes libertad de diseño.
