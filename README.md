@@ -1,4 +1,5 @@
 # API para Gestión de Módulos de Cursos
+## Realiza un fork de este repositorio y al culminar presenta un Pull request, si tienes alguna duda o consulta puedes enviarla por medio de un draft
 
 Este es un API RESTful que proporciona información sobre módulos de cursos y sus clases asociadas. El API también utiliza **JWT** para proteger rutas sensibles.
 
@@ -8,9 +9,9 @@ La API está desplegada y disponible en la siguiente URL:
 
 ## Endpoints
 
-La primera parte de la prueba consiste en crear un Login basico que permita obtener un JWT:
+## La primera parte de la prueba consiste en crear un Login basico que permita obtener un JWT:
 
-### 1. **Login para obtener JWT**
+1. **Login para obtener JWT**
 **Método**: `POST`  
 **URL**: `/login`
 
@@ -69,7 +70,7 @@ donde obtendras una respuesta como esta:
 ]
 ```
 
-La segunda parte del Test consiste en mostrar los datos de un curso.
+## La segunda parte del Test consiste en mostrar los datos de un curso.
 
 Puedes utilizar Js Vanilla, React o Next para consumir dicha API; en cuanto a tecnolgías derivadas de CSS tienes libre eleccion. 
 Usa como referencia el siguiente ejemplo; finalmente tienes libertad de diseño.
@@ -80,5 +81,6 @@ Puntos a valorar:
   - Calidad de código
   - Rendimiento de componentes
 
+## La ultima parte del test consiste en hacer un deploy en el host que más se acomode a tus conocimientos al hacer el pull request, adjunta el link de tu test
   
 *Esta prueba busca evaluar el expertise del postulante; no necesitas presentarlo en tiempo record. Rindelo con traquilidad y disfruta del Test*
