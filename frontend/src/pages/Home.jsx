@@ -1,6 +1,10 @@
+import CursosList from "../components/CursosList";
+
 const Home = () => {
     return (
-        <div>home</div>
+        <div className="px-12">
+            <CursosList />
+        </div>
     );
 };
 

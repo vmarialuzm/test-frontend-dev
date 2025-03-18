@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import CursoCard from "./components/CursoCard";
 
 function App() {
 
@@ -18,13 +20,13 @@ function App() {
             path="/login"
             element={
               isAuthenticated ?
-                <Navigate to="/home" />:
+                <Navigate to="/" />:
                 <Login setIsAuthenticated={setIsAuthenticated} />
             }
           />
           
           <Route 
-            path="/home"
+            path="/"
             element={
               isAuthenticated ?
                 <Home />:
@@ -32,7 +34,16 @@ function App() {
             }
           />
 
-          <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/login"} />} />
+          <Route 
+            path="/curso/:id"
+            element={
+              isAuthenticated ?
+                <CursoCard />:
+                <Navigate to="/login" />
+            }
+          />
+
+          <Route path="/*" element={<Navigate to={isAuthenticated ? "/home" : "/login"} />} />
         </Routes>
       </Router>
     </div>
