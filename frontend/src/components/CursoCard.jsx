@@ -36,7 +36,7 @@ const CursoCard = () => {
                             <li 
                                 key={i} 
                                 onClick={() => setSelectedClaseIndex(i)}
-                                className={`relative pl-8 pb-8 hover:bg-gray-800 rounded-2xl cursor-pointer ${
+                                className={`relative pl-8 pb-8 hover:rounded-2xl cursor-pointer ${
                                     selectedClaseIndex === i ? "bg-gray-800" : ""
                                 }`}
                             >

@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import CursoCard from "./components/CursoCard";
+import CheckToken from "./components/CheckToken";
 
 function App() {
 
@@ -15,6 +16,11 @@ function App() {
   return (
     <div>
       <Router>
+        <Navbar 
+          isAuthenticated={isAuthenticated}
+          setIsAuthenticated={setIsAuthenticated}
+        />
+        <CheckToken setIsAuthenticated={setIsAuthenticated} />
         <Routes>
           <Route
             path="/login"

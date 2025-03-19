@@ -69,6 +69,8 @@ const Login = ({setIsAuthenticated}) => {
                 // Aquí guardas el token JWT del backend
                 if (data.access_token) {
                     localStorage.setItem('token_pariscorp', data.access_token);
+                    localStorage.setItem('token_expiry', new Date().getTime() + 3600000);
+                
                     setIsAuthenticated(true);
                     navigate('/');
                 }
